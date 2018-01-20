@@ -1,10 +1,29 @@
 # Stories of Warcraft (alpha)
-The amazing quests from the World of Warcraft game turned into a choose-your-adventure format.
 
-## WDI13 Project 3
+The legendary quests from the World of Warcraft game turned into a blog format.
 
-### App Overview
+## App Overview
 
+### MVP
+
+When the user enters the site, they should see a greeting page that asks them to enter their Character's name or continue as "Adventurer". (model 1)
+
+Their avatar name or Adventurer should sit in the top left of the screen. The center screen should have a list of quests to complete and others that can be embarked on. The only quest for this alpha will be the human starting zone, Elwynn Forest. 
+
+When they select a zone, it shows the user a blog post version of that questline. Basically a big wall of text.
+
+### Reach Goals
+
+*  Hide the next quest. When they hit different stopping points within the quests they should be able to "Turn in the Quest" and then the next blog post will appear, allowing them to continue reading.
+* Once they pass the welcome screen they should see their Avatar in the top left with the classic WoW UI.
+* Implementing the character's name in the quest text.
+
+### Final Ice-box
+
+* Be able to customize your character's class.
+* Every Races' starting zone.
+* Implement zone music and background videos for each seperate zone. Make the zones a state/action/whatever that can be triggered.
+* Have a "leveling" mechanic for each area that adds experience to a bar that shows you how far in the quest you are and has the "level-up" noise trigger when you hit certain large points in the story.
 
 #### [Heroku Link](https://www.google.com/)
 
@@ -39,9 +58,9 @@ The amazing quests from the World of Warcraft game turned into a choose-your-adv
 * Worked on getting a fleshed out README to build on later.
 * Built out an ERD and wireframe.
 
-* Started off getting a baseline project working with npm and express-generator.
-* Used Express-generator and npm to get my site's boilerplate out.
-* Built out Schemas and Models.
+* Started off getting a baseline project working with git, express-generator, and create-react-app.
+
+* Built out the Schemas and Models.
 * Built a Seeds file to test with.
 
 * Set a full CRUD route for each level of my model.
@@ -54,3 +73,5 @@ The amazing quests from the World of Warcraft game turned into a choose-your-adv
 #### Notes to yourself
 
 * DFTBA
+
+### WDI13 Project 3
