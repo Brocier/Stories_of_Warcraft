@@ -1,5 +1,7 @@
 # Stories of Warcraft (alpha)
 
+[Tavern Fireplace](https://i.imgur.com/sSEOAXu.png)
+
 The legendary quests from the World of Warcraft game turned into a blog format.
 
 ## Welcome Adventurer!
