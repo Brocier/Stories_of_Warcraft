@@ -1,10 +1,10 @@
 {
   "name": "stories-of-warcraft",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "dev": "concurrently \"nodemon app.js\" \"cd ./client  && npm start \" ",
+    "start": "node ./bin/www",
+    "dev": "concurrently \"nodemon ./bin/www\" \"cd ./client  && npm start \" ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
