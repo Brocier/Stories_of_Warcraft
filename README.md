@@ -33,7 +33,7 @@ When they select a zone, it shows the user a blog post version of that questline
 * Implement zone music and background videos for each seperate zone. Make the zones a state/action/whatever that can be triggered.
 * Have a "leveling" mechanic for each area that adds experience to a bar that shows you how far in the quest you are and has the "level-up" noise trigger when you hit certain large points in the story.
 
-#### [Heroku Link](https://www.google.com/)
+#### [Heroku Link](https://stories-of-warcraft.herokuapp.com/)
 
 #### [Trello Board](https://trello.com/b/7mAmCB1d/wdi-project-3)
 
