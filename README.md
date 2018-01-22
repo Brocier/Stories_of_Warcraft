@@ -8,7 +8,7 @@ The legendary quests from the World of Warcraft game turned into blog format.
 
 You must have traveled a long way to reach this README.md file. Let me be your guide.
 
-This web-app has the ambitious goal of turning the incredible World of Warcraft into an easily digestible and readable format. Sometimes you just want to be able to sit down and read a story without having to kull the kobolds with your own hands. Enter the Stories of Warcraft, and be immersed in the world that has consumed countless hours of human productivity.
+This web-app has the ambitious goal of turning the incredible World of Warcraft into an easily digestible and readable format. Sometimes you just want to be able to sit down and read a story without having to cull the kobolds with your own hands. Enter the Stories of Warcraft, and be immersed in the world that has consumed countless hours of human productivity.
 
 ## App Overview
 
