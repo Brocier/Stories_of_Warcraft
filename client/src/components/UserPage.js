@@ -4,9 +4,7 @@ import styled from 'styled-components'
 
 class UserPage extends Component {
   state = {
-    users: {
-      name: 'Brocier'
-    }
+    users: {}
   }
   async componentWillMount() {
     const response = await axios.get('/api/users')
