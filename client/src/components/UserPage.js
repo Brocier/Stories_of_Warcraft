@@ -18,10 +18,6 @@ class UserPage extends Component {
       <div>
         <div>
           <div>Hello From User</div>
-          {this
-            .state
-            .users
-            .map((users))}
         </div>
       </div>
     )
