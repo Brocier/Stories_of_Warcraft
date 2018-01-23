@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import axios from 'axios'
 // import styled from 'styled-components'
 
@@ -22,4 +22,4 @@ class UserPage extends Component {
   }
 }
 
-export default UserPage;
+export default UserPage
