@@ -1,15 +1,13 @@
-const defaultState = ['Hello Adventurer']
-
-function user(state = defaultState, action) {
+function userReducer(state = {}, action) {
   switch (action.type) {
-    case 'ADD_USER':
+    case 'RECEIVE_USERS':
       return [
         ...state,
-        action.user
+        action.users
       ]
     default:
       return state
   }
 }
 
-export default user
+export default userReducer

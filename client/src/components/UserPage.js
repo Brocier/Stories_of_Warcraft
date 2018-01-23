@@ -1,13 +1,18 @@
 import React, {Component} from 'react'
 
 import {connect} from 'react-redux'
-import {addUser} from '../actions/userActions'
+import {getUsers} from '../actions/actions.js'
 // import styled from 'styled-components'
 
 class UserPage extends Component {
   state = {
     users: {},
     formValue: ''
+  }
+  componentWillMount() {
+    this
+      .props
+      .getUsers()
   }
 
   handleChange = (event) => {
@@ -22,7 +27,7 @@ class UserPage extends Component {
   render() {
     return (
       <div>
-        React/Redux Boilerplate Up and Running
+        UserPage.js Component
         <div>
           <input
             type="text"
@@ -30,12 +35,16 @@ class UserPage extends Component {
             onChange={this.handleChange}
             value={this.state.formValue}/>
           <button onClick={this.handleButtonPress}>Add a user</button>
+
         </div>
 
-        {this
+        {/* {this
           .props
           .users
-          .map((user, i) => <p key={i}>{user.name}</p>)}
+          .map((user, i) => <p key={i}>{user.name}</p>)} */}
+
+        <pre>Blah</pre>
+        <pre>{JSON.stringify(this.props.users)}</pre>
       </div>
     )
   }
@@ -44,4 +53,4 @@ const mapStateToProps = (state) => {
   return {users: state.users}
 }
 
-export default connect(mapStateToProps, {addUser})(UserPage)
+export default connect(mapStateToProps, {getUsers})(UserPage)
