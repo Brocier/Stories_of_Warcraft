@@ -1,14 +1,27 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+
+import {connect} from 'react-redux'
+import {addUser} from '../actions/userActions'
 // import styled from 'styled-components'
 
 class UserPage extends Component {
   state = {
-    users: {}
+    users: {},
+    formValue: ''
   }
   async componentWillMount() {
     const response = await axios.get('/api/users')
     this.setState({users: response.data})
+  }
+
+  handleChange = (event) => {
+    this.setState({formValue: event.target.value})
+  }
+  handleButtonPress = () => {
+    this
+      .props
+      .addUser(this.state.formValue)
   }
 
   render() {
@@ -27,14 +40,13 @@ class UserPage extends Component {
         {this
           .props
           .users
-          .map((phrase, i) => <p key={i}>{user}</p>)}
+          .map((user, i) => <p key={i}>{user.name}</p>)}
       </div>
     )
   }
-
-  const mapStateToProps = (state) => {
-    return {users: state.user}
-  }
+}
+const mapStateToProps = (state) => {
+  return {users: state.users}
 }
 
-export default UserPage
+export default connect(mapStateToProps, {addUser})(UserPage)

@@ -1,6 +1,6 @@
 const defaultState = ['Hello Adventurer']
 
-function example(state = defaultState, action) {
+function user(state = defaultState, action) {
   switch (action.type) {
     case 'ADD_USER':
       return [
