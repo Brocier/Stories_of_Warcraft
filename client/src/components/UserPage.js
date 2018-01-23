@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import axios from 'axios'
 
 import {connect} from 'react-redux'
 import {addUser} from '../actions/userActions'
@@ -9,10 +8,6 @@ class UserPage extends Component {
   state = {
     users: {},
     formValue: ''
-  }
-  async componentWillMount() {
-    const response = await axios.get('/api/users')
-    this.setState({users: response.data})
   }
 
   handleChange = (event) => {
