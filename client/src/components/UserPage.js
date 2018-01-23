@@ -14,11 +14,26 @@ class UserPage extends Component {
   render() {
     return (
       <div>
+        React/Redux Boilerplate Up and Running
         <div>
-          <div>Hello From User</div>
+          <input
+            type="text"
+            placeholder='write something here'
+            onChange={this.handleChange}
+            value={this.state.formValue}/>
+          <button onClick={this.handleButtonPress}>Add a user</button>
         </div>
+
+        {this
+          .props
+          .users
+          .map((phrase, i) => <p key={i}>{user}</p>)}
       </div>
     )
+  }
+
+  const mapStateToProps = (state) => {
+    return {users: state.user}
   }
 }
 

@@ -20,27 +20,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        React/Redux Boilerplate Up and Running
-        <div>
-          <input
-            type="text"
-            placeholder='write something here'
-            onChange={this.handleChange}
-            value={this.state.formValue}/>
-          <button onClick={this.handleButtonPress}>Add a user</button>
-        </div>
-
-        {this
-          .props
-          .users
-          .map((phrase, i) => <p key={i}>{user}</p>)}
+      <div>
+        App Component
+        <UserPage/>
       </div>
     )
-  }
-
-  const mapStateToProps = (state) => {
-    return {users: state.user}
   }
 }
 export default connect(mapStateToProps, {addUser})(App)
