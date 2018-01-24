@@ -5,7 +5,6 @@ import axios from 'axios'
 export function receiveUsers(users) {
   return {type: 'RECEIVE_USERS', users}
 }
-
 export function getUsers() {
   return function (dispatch) {
     return axios
@@ -16,6 +15,15 @@ export function getUsers() {
   }
 }
 
-// posts: json.data.children.map(child => child.data),   receivedAt: Date.now()
-// (async componentWillMount() {     const response = await
-// axios.get('/api/users')     this.setState({users: response.data})
+export function addUsersToDb(user) {
+  return {type: 'ADD_USER', user}
+}
+export function newUserToDb() {
+  return function (dispatch) {
+    return axios
+      .post('/api/users')
+      .then((response) => {
+        dispatch(receiveUsers(response.data))
+      })
+  }
+}

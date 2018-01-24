@@ -5,7 +5,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 const User = require('./models/User.js')
 
-const adventurer = new User({name: 'Adventurer'})
+const adventurer = new User({name: 'Adventurer', description: 'The hero of this story'})
 
 User
   .remove({})
