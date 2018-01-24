@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import UserPage from './UserPage.js'
 import styled from 'styled-components'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 const AppContainer = styled.div `
 border: red 3px solid;`

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Redirect} from 'react-router'
+// import {Redirect} from 'react-router'
 import {connect} from 'react-redux'
 import {newUserToDb} from '../actions/actions.js'
 import styled from 'styled-components'
@@ -28,7 +28,11 @@ class UserForm extends Component {
     this
       .props
       .newUserToDb(this.state.newUser)
-    this.setState({redirect: true})
+    this.setState({
+      newUser: {
+        name: ""
+      }
+    })
   }
   render() {
     // if (this.state.redirect) {   return (<Redirect     to={{     pathname: '/',
