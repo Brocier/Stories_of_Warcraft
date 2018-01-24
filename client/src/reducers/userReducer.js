@@ -1,10 +1,11 @@
-function userReducer(state = {}, action) {
+function userReducer(state = [], action) {
   switch (action.type) {
     case 'RECEIVE_USERS':
       return [
         ...state,
-        action.users
+        ...action.users
       ]
+
     default:
       return state
   }
