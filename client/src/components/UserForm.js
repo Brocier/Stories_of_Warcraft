@@ -43,7 +43,7 @@ class UserForm extends Component {
         <div>
           <input
             type="text"
-            placeholder="What is your name Adventurer?"
+            placeholder="What is your name?"
             name="name"
             onChange={this.handleChange}
             value={this.state.newUser.name}/>
