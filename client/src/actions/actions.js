@@ -27,3 +27,16 @@ export function newUserToDb(newUserObject) {
       })
   }
 }
+
+export function editUserToDb(user) {
+  return {type: 'EDIT_USER', user}
+}
+export function editUser(edittedUserObject) {
+  return function (dispatch) {
+    return axios
+      .patch('/api/users', edittedUserObject)
+      .then((response) => {
+        dispatch(editUserToDb(response.data))
+      })
+  }
+}
