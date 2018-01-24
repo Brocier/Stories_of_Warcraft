@@ -35,7 +35,7 @@ router.delete('/:userId', async(req, res) => {
 router.patch('/:userId', async(req, res) => {
   try {
     const updatedIdea = await User.findByIdAndUpdate(req.params.userId, req.body, {new: true})
-    res.json(updateIdea)
+    res.json(updatedIdea)
   } catch (err) {
     console.log(err)
     res.sendStatus(500)
