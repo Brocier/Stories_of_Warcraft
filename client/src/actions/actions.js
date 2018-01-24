@@ -40,3 +40,16 @@ export function editUser(edittedUserObject) {
       })
   }
 }
+
+export function deleteUserFromDb(user) {
+  return {type: 'DELETE_USER', user}
+}
+export function deleteUser(userObjectToDelete) {
+  return function (dispatch) {
+    return axios
+      .delete('/api/users', userObjectToDelete)
+      .then((response) => {
+        dispatch(deleteUserFromDb(response.data))
+      })
+  }
+}
