@@ -10,11 +10,7 @@ function userReducer(state = [], action) {
         ...state,
         action.user
       ]
-    case 'EDIT_USER':
-      return [
-        ...state,
-        action.user
-      ]
+      // case 'EDIT_USER':   return [     ...state,     action.user   ]
     case 'DELETE_USER':
       return [state]
     default:

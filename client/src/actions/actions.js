@@ -28,26 +28,19 @@ export function newUserToDb(newUserObject) {
   }
 }
 
-export function editUserToDb(user) {
-  return {type: 'EDIT_USER', user}
-}
-export function editUser(edittedUserObject) {
-  return function (dispatch) {
-    return axios
-      .patch('/api/users', edittedUserObject)
-      .then((response) => {
-        dispatch(editUserToDb(response.data))
-      })
-  }
-}
+// export function edittedUserToDb(user) {   return {type: 'EDIT_USER', user} }
+// export function editUser(edittedUserObject) {   return function (dispatch) {
+// return axios       .patch('/api/users', edittedUserObject) .then((response)
+// => {         dispatch(edittedUserToDb(response.data)) })   } }
 
 export function deleteUserFromDb(user) {
   return {type: 'DELETE_USER', user}
 }
 export function deleteUser(userObjectToDelete) {
+  console.log(userObjectToDelete)
   return function (dispatch) {
     return axios
-      .delete('/api/users', userObjectToDelete)
+      .delete(`/api/users/:${userObjectToDelete._id}`)
       .then((response) => {
         dispatch(deleteUserFromDb(response.data))
       })
