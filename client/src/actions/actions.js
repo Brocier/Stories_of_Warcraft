@@ -18,11 +18,12 @@ export function getUsers() {
 export function addUsersToDb(user) {
   return {type: 'ADD_USER', user}
 }
-export function newUserToDb(newUserName) {
+export function newUserToDb(newUserObject) {
   return function (dispatch) {
     return axios
-      .post('/api/users')
+      .post('/api/users', newUserObject)
       .then((response) => {
+        console.log(response.data)
         dispatch(addUsersToDb(response.data))
       })
   }

@@ -14,8 +14,6 @@ class UserForm extends Component {
     redirect: false
   }
 
-  newUser = [...this.state.newUser]
-
   handleChange = (event) => {
     const updatedUser = {
       ...this.state.newUser
@@ -31,18 +29,10 @@ class UserForm extends Component {
       .props
       .newUserToDb(this.state.newUser)
     this.setState({redirect: true})
-
   }
   render() {
-    if (this.state.redirect) {
-      return (<Redirect
-        to={{
-        pathname: '/userPage',
-        state: {
-          fromDashboard: true
-        }
-      }}/>)
-    }
+    // if (this.state.redirect) {   return (<Redirect     to={{     pathname: '/',
+    // state: {       fromDashboard: true     }   }}/>) }
     return (
       <UserFormContainer>
         User Form Component
@@ -50,6 +40,7 @@ class UserForm extends Component {
           <input
             type="text"
             placeholder="What is your name Adventurer?"
+            name="name"
             onChange={this.handleChange}
             value={this.state.newUser.name}/>
           <button onClick={this.handleButtonPress}>Add a user</button>
