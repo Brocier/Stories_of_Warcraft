@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getUsers, deleteUser} from '../actions/actions.js'
+import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserListContainer = styled.div `
@@ -23,9 +23,10 @@ class UserList extends Component {
             .users
             .map((user, i) => {
               return (
-                <li key={i}>{user.name} {/* <button onClick= {() => this.props.editUser(user)}>
+                <li key={i}>{user.name}
+                  <button onClick= {() => this.props.editUser(user)}>
                     Edit
-                  </button> */}
+                  </button>
                   <button onClick= {() => this.props.deleteUser(user)}>
                     Delete
                   </button>
@@ -42,4 +43,4 @@ const mapStateToProps = (state) => {
   return {users: state.users}
 }
 
-export default connect(mapStateToProps, {getUsers, deleteUser})(UserList)
+export default connect(mapStateToProps, {getUsers, editUser, deleteUser})(UserList)
