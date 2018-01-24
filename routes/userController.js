@@ -14,7 +14,6 @@ router.get('/', async(req, res) => {
 
 router.post('/', async(req, res) => {
   try {
-    console.log(req.body)
     const newUser = await User.create(req.body)
     res.json(newUser)
   } catch (err) {
@@ -25,7 +24,7 @@ router.post('/', async(req, res) => {
 
 router.delete('/:userId', async(req, res) => {
   try {
-    await User.findByIdeAndRemove(req.params.userId)
+    await User.findByIdAndRemove(req.params.userId)
     res.sendStatus(200)
   } catch (err) {
     console.log(err)
@@ -35,7 +34,7 @@ router.delete('/:userId', async(req, res) => {
 
 router.patch('/:userId', async(req, res) => {
   try {
-    const updatedIdea = await User.findByIdeAndUpdate(req.params.userId, req.body, {new: true})
+    const updatedIdea = await User.findByIdAndUpdate(req.params.userId, req.body, {new: true})
     res.json(updateIdea)
   } catch (err) {
     console.log(err)

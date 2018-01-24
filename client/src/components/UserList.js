@@ -14,8 +14,6 @@ class UserList extends Component {
   }
 
   render() {
-    console.log(this.props.users)
-
     return (
       <UserListContainer>
         UserList.js Component
