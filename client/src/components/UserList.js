@@ -23,7 +23,8 @@ class UserList extends Component {
             .users
             .map((user, i) => {
               return (
-                <div key={i}>{user.name}</div>
+                <div key={i}>{user.name}
+                </div>
               )
             })}
         </div>

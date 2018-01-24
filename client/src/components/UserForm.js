@@ -35,8 +35,8 @@ class UserForm extends Component {
     })
   }
   render() {
-    // if (this.state.redirect) {   return (<Redirect     to={{     pathname: '/',
-    // state: {       fromDashboard: true     }   }}/>) }
+    // if (this.state.redirect) {   return (<Redirect     to={{     pathname:
+    // '/userPage',     state: {       fromDashboard: true     }   }}/>) }
     return (
       <UserFormContainer>
         User Form Component
