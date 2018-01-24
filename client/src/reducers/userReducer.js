@@ -5,7 +5,11 @@ function userReducer(state = [], action) {
         ...state,
         ...action.users
       ]
-
+    case 'ADD_USER':
+      return [
+        ...state,
+        ...action.user
+      ]
     default:
       return state
   }

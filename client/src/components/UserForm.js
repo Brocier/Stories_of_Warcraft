@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
-// import {connect} from 'react-redux' import {addUsersToDb} from
-// '../actions/actions.js'
+import {connect} from 'react-redux'
+import {newUserToDb} from '../actions/actions.js'
 
 class UserForm extends Component {
   state = {
@@ -14,7 +14,7 @@ class UserForm extends Component {
   handleButtonPress = () => {
     this
       .props
-      .addUser(this.state.formValue)
+      .newUserToDb(this.state.formValue)
   }
   render() {
     return (
@@ -34,4 +34,4 @@ class UserForm extends Component {
   }
 }
 
-export default UserForm
+export default connect(null, {newUserToDb})(UserForm)

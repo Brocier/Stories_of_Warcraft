@@ -23,7 +23,7 @@ export function newUserToDb() {
     return axios
       .post('/api/users')
       .then((response) => {
-        dispatch(receiveUsers(response.data))
+        dispatch(addUsersToDb(response.data))
       })
   }
 }
