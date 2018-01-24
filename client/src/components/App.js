@@ -1,10 +1,20 @@
 import React, {Component} from 'react'
+import UserPage from './UserPage.js'
+import styled from 'styled-components'
+
+const AppContainer = styled.div `
+border: red 3px solid;`
 class App extends Component {
   render() {
     return (
-      <div>
+      <AppContainer>
+
         App Component
-      </div>
+        <div>
+          Router switch needed here:
+        </div>
+        <UserPage/>
+      </AppContainer>
     )
   }
 }

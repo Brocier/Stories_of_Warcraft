@@ -18,7 +18,7 @@ export function getUsers() {
 export function addUsersToDb(user) {
   return {type: 'ADD_USER', user}
 }
-export function newUserToDb() {
+export function newUserToDb(newUserName) {
   return function (dispatch) {
     return axios
       .post('/api/users')

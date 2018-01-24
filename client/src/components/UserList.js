@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getUsers} from '../actions/actions.js'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 
+const UserListContainer = styled.div `
+border: green 3px solid;`
 class UserList extends Component {
 
   componentWillMount() {
@@ -15,7 +17,7 @@ class UserList extends Component {
     console.log(this.props.users)
 
     return (
-      <div>
+      <UserListContainer>
         UserList.js Component
         <div>
           {this
@@ -27,7 +29,7 @@ class UserList extends Component {
               )
             })}
         </div>
-      </div>
+      </UserListContainer>
     )
   }
 }
