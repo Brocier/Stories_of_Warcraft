@@ -46,7 +46,6 @@ class UserForm extends Component {
     // '/userPage',     state: {       fromDashboard: true     }   }}/>) }
     return (
       <UserFormContainer>
-        UserForm.js Component
         <h2>
           What is your name, Adventurer?
         </h2>
