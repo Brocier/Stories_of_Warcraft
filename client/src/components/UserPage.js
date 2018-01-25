@@ -5,7 +5,7 @@ import UserForm from './UserForm.js'
 import UserList from './UserList.js'
 
 const UserPageContainer = styled.div `
-border: gray 3px solid;
+border: gray .5px solid;
 display: flex;
 flex-direction: column;
 justify-content: space-between;

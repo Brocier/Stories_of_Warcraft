@@ -5,7 +5,7 @@ import {newUserToDb} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserFormContainer = styled.div `
-border: blue 3px solid;
+border: blue .5px solid;
 input{
   width: 50%;
   height: 20px;

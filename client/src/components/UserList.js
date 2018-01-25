@@ -4,7 +4,7 @@ import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserListContainer = styled.div `
-border: green 3px solid;
+border: green .5px solid;
 .listholder{
 display: flex;
 justify-content: space-between;

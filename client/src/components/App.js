@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 const AppContainer = styled.div `
-border: red 3px solid;
+border: red .5px solid;
 height: 98vh;
 display: flex;
 flex-direction: column;
