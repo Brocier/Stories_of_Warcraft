@@ -29,7 +29,6 @@ class App extends Component {
     return (
       <Router>
         <AppContainer>
-          App.js Component
           <h1>Stories of Warcraft</h1>
           <UserPage/>
         </AppContainer>
