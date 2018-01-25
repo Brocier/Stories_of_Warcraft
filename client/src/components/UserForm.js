@@ -5,7 +5,14 @@ import {newUserToDb} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserFormContainer = styled.div `
-border: blue 3px solid;`
+border: blue 3px solid;
+input{
+  width: 50%;
+  height: 20px;
+}
+button{
+
+}`
 class UserForm extends Component {
   state = {
     newUser: {
@@ -40,10 +47,13 @@ class UserForm extends Component {
     return (
       <UserFormContainer>
         UserForm.js Component
+        <h2>
+          What is your name, Adventurer?
+        </h2>
         <div>
           <input
             type="text"
-            placeholder="What is your name?"
+            placeholder=""
             name="name"
             onChange={this.handleChange}
             value={this.state.newUser.name}/>

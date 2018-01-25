@@ -5,10 +5,20 @@ import styled from 'styled-components'
 
 const UserListContainer = styled.div `
 border: green 3px solid;
-li{
+.listholder{
 display: flex;
 justify-content: space-between;
-}`
+margin: 4px;
+  a{
+    text-decoration: none;
+    color: papayawhip;
+    border: 3px white solid;
+    padding: 2px;
+    border-radius: 10%;
+  }
+}
+
+`
 class UserList extends Component {
 
   componentWillMount() {
@@ -21,17 +31,17 @@ class UserList extends Component {
     return (
       <UserListContainer>
         UserList.js Component
-        <ul>
+        <div>
           {this
             .props
             .users
             .map((user, i) => {
               return (
-                <li key={i}>
+                <div className="listholder" key={i}>
                   <a href="">
                     {user.name}
                   </a>
-                  <div>
+                  <div className="buttons">
                     <button onClick= {() => this.props.editUser(user)}>
                       Edit
                     </button>
@@ -39,10 +49,10 @@ class UserList extends Component {
                       Delete
                     </button>
                   </div>
-                </li>
+                </div>
               )
             })}
-        </ul>
+        </div>
       </UserListContainer>
     )
   }

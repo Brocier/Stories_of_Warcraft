@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import UserPage from './UserPage.js'
 import styled from 'styled-components'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 const AppContainer = styled.div `
 border: red 3px solid;
@@ -9,8 +9,15 @@ height: 98vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-img{
-  width: 
+background-color: #ebdec2;
+/* @font-face {
+  font-family: 'LifeCraft';
+  src:  url('/fonts/LifeCraft_Font.woff2') format('woff2'),
+        url('/fonts/LifeCraft_Font.woff') format('woff');
+}
+font-family: LifeCraft; */
+h1{
+  font-size: 30px;
 }
 `
 class App extends Component {
@@ -19,8 +26,8 @@ class App extends Component {
       <Router>
         <AppContainer>
           App.js Component
+          <h1>Stories of Warcraft</h1>
           <UserPage/>
-          <img src="https://i.imgur.com/sSEOAXu.png?1" alt="Tavern Fireplace"/>
         </AppContainer>
       </Router>
     )
