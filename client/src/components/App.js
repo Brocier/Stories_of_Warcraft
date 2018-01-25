@@ -21,6 +21,7 @@ h1{
   font-size: 12vw;
   display: flex;
   justify-content: center;
+  font-weight: 100;
 }
 `
 class App extends Component {
