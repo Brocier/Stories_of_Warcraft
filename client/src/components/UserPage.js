@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import UserForm from './UserForm.js'
 import UserList from './UserList.js'
-import EditForm from './EditForm.js'
 
 const UserPageContainer = styled.div `
 border: gray .5px solid;
@@ -29,7 +28,6 @@ class UserPage extends Component {
         <UserForm/>
         <div className="listAndForm">
           <UserList/>
-          <EditForm/>
         </div>
         <div>
           <img

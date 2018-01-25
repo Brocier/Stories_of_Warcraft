@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import styled from 'styled-components'
+import EditForm from './EditForm.js'
 
 const UserListContainer = styled.div `
   border: green .5px solid;
@@ -45,6 +46,7 @@ class UserList extends Component {
                     {user.name}
                   </a>
                   <div className="description">{user.description}</div>
+                  <EditForm/>
                   <div className="buttons">
                     <button onClick= {() => this.props.editUser(user)}>
                       {/* I need this edit button to turn the a tag above into a form I can type into and then save to have it update the user. */}
