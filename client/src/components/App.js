@@ -5,7 +5,7 @@ import {BrowserRouter as Router} from 'react-router-dom'
 
 const AppContainer = styled.div `
 border: red .5px solid;
-height: 98vh;
+height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -16,6 +16,7 @@ h1{
   display: flex;
   justify-content: center;
   font-weight: 100;
+  margin: 0;
 }
 `
 class App extends Component {
