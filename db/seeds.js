@@ -19,7 +19,7 @@ beth
 
 const josh = new User({name: 'Brocier', description: 'My first account name'})
 const rashtael = new Character({name: "Rashtael", description: "Totally BA warrior"})
-const mastiva = new Charcter({name: "Mastiva", description: "Druid AF"})
+const mastiva = new Character({name: "Mastiva", description: "Druid AF"})
 const kobolds = new Quest({name: "Cull the Kobolds", description: "Pesky rats with candles. Kill em' all."})
 const dragon = new Quest({name: "Sands of Time", description: "How about we learn how to turn into a dragon?"})
 

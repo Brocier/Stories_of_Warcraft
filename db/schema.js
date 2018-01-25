@@ -13,7 +13,7 @@ const QuestSchema = new Schema({
   }
 }, {timestamps: {}})
 
-const CharacerSchema = new Schema({
+const CharacterSchema = new Schema({
   name: {
     type: String,
     required: false,
