@@ -7,8 +7,11 @@ import styled from 'styled-components'
 const EditUserFormContainer = styled.div `
   border: purple .5px solid;
   input{
-    width: 50%;
+    width: 100%;
     height: 20px;
+  }
+  .editDescriptionRow{
+    display: flex;
   }
 `
 class EditForm extends Component {
@@ -46,12 +49,23 @@ class EditForm extends Component {
       <EditUserFormContainer>
         Edit Form Component
         <div>
-          <input
-            type="text"
-            name="name"
-            onChange={this.handleChange}
-            value={this.state.userToEdit.name}/>
-          <button onClick={this.handleButtonPress}>Edit this user</button>
+          {this
+            .props
+            .usersToEdit
+            .map((user, i) => {
+              return (
+                <div className="editDescriptionRow" key={i}>
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      onChange={this.handleChange}
+                      value={user.description}/>
+                  </div>
+                  <button onClick={this.handleButtonPress}>Edit this Description</button>
+                </div>
+              )
+            })}
         </div>
       </EditUserFormContainer>
     )
@@ -59,6 +73,6 @@ class EditForm extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return {users: state.users}
+  return {usersToEdit: state.users}
 }
 export default connect(mapStateToProps, {editUser})(EditForm)

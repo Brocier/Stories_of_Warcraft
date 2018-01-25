@@ -52,7 +52,6 @@ class UserForm extends Component {
         <div>
           <input
             type="text"
-            placeholder=""
             name="name"
             onChange={this.handleChange}
             value={this.state.newUser.name}/>
