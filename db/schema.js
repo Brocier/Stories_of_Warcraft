@@ -24,7 +24,7 @@ const CharacerSchema = new Schema({
     required: false,
     default: 'Default Description'
   },
-  QuestSchema: []
+  quests: [QuestSchema]
 }, {timestamps: {}})
 
 const UserSchema = new Schema({
@@ -38,7 +38,7 @@ const UserSchema = new Schema({
     required: false,
     default: 'Default Description'
   },
-  CharacterSchema: []
+  characters: [CharacterSchema]
 }, {timestamps: {}})
 
 module.exports = {
