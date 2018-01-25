@@ -1,5 +1,32 @@
 const {Schema} = require('mongoose')
 
+const QuestSchema = new Schema({
+  name: {
+    type: String,
+    required: false,
+    default: 'Go get me that scroll'
+  },
+  description: {
+    type: String,
+    required: false,
+    default: 'Default Description'
+  }
+}, {timestamps: {}})
+
+const CharacerSchema = new Schema({
+  name: {
+    type: String,
+    required: false,
+    default: 'ZugZug'
+  },
+  description: {
+    type: String,
+    required: false,
+    default: 'Default Description'
+  },
+  QuestSchema: []
+}, {timestamps: {}})
+
 const UserSchema = new Schema({
   name: {
     type: String,
@@ -10,9 +37,12 @@ const UserSchema = new Schema({
     type: String,
     required: false,
     default: 'Default Description'
-  }
+  },
+  CharacterSchema: []
 }, {timestamps: {}})
 
 module.exports = {
-  UserSchema
+  UserSchema,
+  CharacterSchema,
+  QuestSchema
 }
