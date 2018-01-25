@@ -39,7 +39,7 @@ class UserForm extends Component {
     // '/userPage',     state: {       fromDashboard: true     }   }}/>) }
     return (
       <UserFormContainer>
-        User Form Component
+        UserForm.js Component
         <div>
           <input
             type="text"

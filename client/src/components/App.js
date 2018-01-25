@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router>
         <AppContainer>
-          App Component
+          App.js Component
           <Switch>
             <Route exact path="/" component={UserPage}/>
           </Switch>

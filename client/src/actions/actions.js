@@ -36,7 +36,7 @@ export function editUser(edittedUserObject) {
     return axios
       .patch(`/api/users/${edittedUserObject._id}`, edittedUserObject)
       .then((response) => {
-        dispatch(edittedUserToDb(edittedUserObject._id))
+        dispatch(edittedUserToDb(edittedUserObject))
       })
   }
 }

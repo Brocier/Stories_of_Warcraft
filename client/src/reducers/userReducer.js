@@ -13,7 +13,7 @@ function userReducer(state = [], action) {
     case 'EDIT_USER':
       return [
         ...state,
-        action.user
+        ...action.user
       ]
     case 'DELETE_USER':
       return state.filter(user => user._id !== action.user)
