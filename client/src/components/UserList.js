@@ -4,7 +4,11 @@ import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserListContainer = styled.div `
-border: green 3px solid;`
+border: green 3px solid;
+li{
+display: flex;
+justify-content: space-between;
+}`
 class UserList extends Component {
 
   componentWillMount() {
@@ -23,13 +27,18 @@ class UserList extends Component {
             .users
             .map((user, i) => {
               return (
-                <li key={i}>{user.name}
-                  <button onClick= {() => this.props.editUser(user)}>
-                    Edit
-                  </button>
-                  <button onClick= {() => this.props.deleteUser(user)}>
-                    Delete
-                  </button>
+                <li key={i}>
+                  <a href="">
+                    {user.name}
+                  </a>
+                  <div>
+                    <button onClick= {() => this.props.editUser(user)}>
+                      Edit
+                    </button>
+                    <button onClick= {() => this.props.deleteUser(user)}>
+                      Delete
+                    </button>
+                  </div>
                 </li>
               )
             })}
