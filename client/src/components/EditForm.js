@@ -11,7 +11,7 @@ const EditUserFormContainer = styled.div `
     height: 20px;
   }
 `
-class UserForm extends Component {
+class EditForm extends Component {
   state = {
     userToEdit: {
       name: ''
@@ -44,6 +44,7 @@ class UserForm extends Component {
   render() {
     return (
       <EditUserFormContainer>
+        Edit Form Component
         <div>
           <input
             type="text"
@@ -57,4 +58,7 @@ class UserForm extends Component {
   }
 }
 
-export default connect(null, {editUser})(UserForm)
+const mapStateToProps = (state) => {
+  return {users: state.users}
+}
+export default connect(mapStateToProps, {editUser})(EditForm)

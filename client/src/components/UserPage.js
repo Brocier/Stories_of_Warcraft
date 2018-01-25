@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import UserForm from './UserForm.js'
 import UserList from './UserList.js'
+import EditForm from './EditForm.js'
 
 const UserPageContainer = styled.div `
 border: gray .5px solid;
@@ -12,7 +13,9 @@ justify-content: space-between;
 align-items: center;
 background: #170e09;
 color: #fff;
-
+.listAndForm{
+  display: flex;
+}
 img{
   border-radius: 44%;
 }
@@ -24,7 +27,10 @@ class UserPage extends Component {
       <UserPageContainer>
         UserPage.js Component
         <UserForm/>
-        <UserList/>
+        <div className="listAndForm">
+          <UserList/>
+          <EditForm/>
+        </div>
         <div>
           <img
             src="https://media.giphy.com/media/l4pT08fraKXoYgxiw/giphy.gif"
