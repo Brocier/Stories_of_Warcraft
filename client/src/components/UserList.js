@@ -4,19 +4,22 @@ import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserListContainer = styled.div `
-border: green .5px solid;
-.listholder{
-display: flex;
-justify-content: space-between;
-margin: 4px;
-  a{
-    text-decoration: none;
-    color: papayawhip;
-    border: 3px white solid;
-    padding: 2px;
-    border-radius: 10%;
+  border: green .5px solid;
+  .listholder{
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+    a{
+      text-decoration: none;
+      color: papayawhip;
+      border: 3px white solid;
+      padding: 2px;
+      border-radius: 10%;
+    }
   }
-}
+  .description{
+    padding: 5px;
+  }
 
 `
 class UserList extends Component {
@@ -41,8 +44,10 @@ class UserList extends Component {
                   <a href="">
                     {user.name}
                   </a>
+                  <div className="description">{user.description}</div>
                   <div className="buttons">
                     <button onClick= {() => this.props.editUser(user)}>
+                      {/* I need this edit button to turn the a tag above into a form I can type into and then save to have it update the user. */}
                       Edit
                     </button>
                     <button onClick= {() => this.props.deleteUser(user)}>

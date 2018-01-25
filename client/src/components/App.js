@@ -18,7 +18,9 @@ background-color: #ebdec2;
 }
 font-family: LifeCraft; */
 h1{
-  font-size: 44px;
+  font-size: 12vw;
+  display: flex;
+  justify-content: center;
 }
 `
 class App extends Component {
