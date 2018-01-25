@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Life Script";
+  src: url("./fonts/LifeCraft_Font.ttf");
+}
+
+body {
+  font-family: "Life Script", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

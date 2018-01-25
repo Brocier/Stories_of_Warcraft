@@ -9,6 +9,7 @@ height: 98vh;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+align-items: space-around;
 background-color: #ebdec2;
 /* @font-face {
   font-family: 'LifeCraft';
@@ -17,7 +18,7 @@ background-color: #ebdec2;
 }
 font-family: LifeCraft; */
 h1{
-  font-size: 30px;
+  font-size: 44px;
 }
 `
 class App extends Component {
