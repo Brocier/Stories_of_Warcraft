@@ -20,34 +20,27 @@ const EditUserFormContainer = styled.div `
 class EditForm extends Component {
   state = {
     userToEdit: {
+      id: this.props.user._id,
       name: this.props.user.name,
       description: this.props.user.description
     }
   }
 
   handleChange = (event) => {
-    console.log("Handle Change is getting triggered")
     const updatedUser = {
       ...this.state.userToEdit
     }
-    const inputField = event.target.description
+    const inputField = event.target.name
     const inputValue = event.target.value
     updatedUser[inputField] = inputValue
-
-    console.log("Updated User", updatedUser)
-
     this.setState({userToEdit: updatedUser})
   }
 
   handleButtonPress = () => {
     this
       .props
-      .editUser(this.state.userToEdit._id)
-    this.setState({
-      userToEdit: {
-        name: ""
-      }
-    })
+      .editUser(this.state.userToEdit)
+    console.log(this.state.userToEdit)
   }
 
   render() {

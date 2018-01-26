@@ -50,8 +50,9 @@ class UserList extends Component {
                     {user.name}
                   </a>
                   <div className="description">{user.description}</div>
+
+                  <EditForm user={user}/>
                   <div className="buttons">
-                    <EditForm user={user}/>
                     <button onClick= {() => this.props.deleteUser(user)}>
                       Delete
                     </button>
