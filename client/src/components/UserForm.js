@@ -6,6 +6,7 @@ import styled from 'styled-components'
 
 const UserFormContainer = styled.div `
 border: blue .5px solid;
+margin: 10px;
 input{
   width: 50%;
   height: 20px;
