@@ -10,6 +10,7 @@ const EditUserFormContainer = styled.div `
   input{
     width: 100%;
     height: 20px;
+    font-family: "Life Craft";
   }
   .editDescriptionRow{
     display: flex;
@@ -19,9 +20,9 @@ const EditUserFormContainer = styled.div `
 class EditForm extends Component {
   state = {
     userToEdit: {
-      name: ''
-    },
-    redirect: false
+      name: '',
+      description: ''
+    }
   }
 
   handleChange = (event) => {
@@ -38,7 +39,7 @@ class EditForm extends Component {
   handleButtonPress = () => {
     this
       .props
-      .editUser(this.state.userToEdit)
+      .editUser(this.state.userToEdit._id)
     this.setState({
       userToEdit: {
         name: ""
@@ -51,7 +52,11 @@ class EditForm extends Component {
       <EditUserFormContainer>
         <div className="editDescriptionRow">
           <div>
-            <input type="text" name="name" onChange={this.handleChange} value=""/>
+            <input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={this.props.user.description}/>
           </div>
           <button onClick={this.handleButtonPress}>Edit this</button>
         </div>
@@ -60,7 +65,4 @@ class EditForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {usersToEdit: state.users}
-}
-export default connect(mapStateToProps, {editUser})(EditForm)
+export default connect(null, {editUser})(EditForm)
