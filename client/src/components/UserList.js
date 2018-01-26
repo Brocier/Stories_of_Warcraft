@@ -10,6 +10,10 @@ const UserListContainer = styled.div `
   display: flex;
   justify-content: space-between;
   margin: 4px;
+  width: 60vw;
+.buttons{
+  display: flex;
+}
     a{
       text-decoration: none;
       color: papayawhip;
@@ -46,12 +50,8 @@ class UserList extends Component {
                     {user.name}
                   </a>
                   <div className="description">{user.description}</div>
-                  <EditForm/>
                   <div className="buttons">
-                    <button onClick= {() => this.props.editUser(user)}>
-                      {/* I need this edit button to turn the a tag above into a form I can type into and then save to have it update the user. */}
-                      Edit
-                    </button>
+                    <EditForm user={user}/>
                     <button onClick= {() => this.props.deleteUser(user)}>
                       Delete
                     </button>
