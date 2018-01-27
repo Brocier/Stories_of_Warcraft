@@ -16,10 +16,7 @@ button{
 }`
 class UserForm extends Component {
   state = {
-    newUser: {
-      name: ''
-    },
-    redirect: false
+    newUser: {}
   }
 
   handleChange = (event) => {
