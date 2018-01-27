@@ -1,10 +1,7 @@
 function userReducer(state = [], action) {
   switch (action.type) {
     case 'RECEIVE_USERS':
-      return [
-        ...state,
-        ...action.users
-      ]
+      return [...action.users]
     case 'ADD_USER':
       return [
         ...state,
