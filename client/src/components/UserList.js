@@ -44,7 +44,7 @@ class UserList extends Component {
           .map((user, i) => {
             return (
               <div className="listholder" key={i}>
-                <a href="">
+                <a href="/">
                   {user.name}
                 </a>
                 <div className="description">{user.description}</div>

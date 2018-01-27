@@ -50,6 +50,11 @@ class EditForm extends Component {
           <div>
             <input
               type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={this.state.userToEdit.name}/>
+            <input
+              type="text"
               name="description"
               onChange={this.handleChange}
               value={this.state.userToEdit.description}/>
