@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import EditForm from './EditForm.js'
 
 const UserListContainer = styled.div `
-  border: green .5px solid;
+  /* border: green .5px solid; */
   .listholder{
   display: flex;
   justify-content: space-between;
@@ -38,29 +38,25 @@ class UserList extends Component {
   render() {
     return (
       <UserListContainer>
-        UserList.js Component
-        <div>
-          {this
-            .props
-            .users
-            .map((user, i) => {
-              return (
-                <div className="listholder" key={i}>
-                  <a href="">
-                    {user.name}
-                  </a>
-                  <div className="description">{user.description}</div>
-
-                  <EditForm user={user}/>
-                  <div className="buttons">
-                    <button onClick= {() => this.props.deleteUser(user)}>
-                      Delete
-                    </button>
-                  </div>
+        {this
+          .props
+          .users
+          .map((user, i) => {
+            return (
+              <div className="listholder" key={i}>
+                <a href="">
+                  {user.name}
+                </a>
+                <div className="description">{user.description}</div>
+                <EditForm user={user}/>
+                <div className="buttons">
+                  <button onClick= {() => this.props.deleteUser(user)}>
+                    Delete
+                  </button>
                 </div>
-              )
-            })}
-        </div>
+              </div>
+            )
+          })}
       </UserListContainer>
     )
   }

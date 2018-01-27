@@ -5,13 +5,14 @@ import UserForm from './UserForm.js'
 import UserList from './UserList.js'
 
 const UserPageContainer = styled.div `
-border: gray .5px solid;
+/* border: gray .5px solid; */
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
 background: #170e09;
 color: #fff;
+border-radius: 10px;
 .listAndForm{
   display: flex;
 }
@@ -24,7 +25,6 @@ class UserPage extends Component {
   render() {
     return (
       <UserPageContainer>
-        UserPage.js Component
         <UserForm/>
         <div className="listAndForm">
           <UserList/>

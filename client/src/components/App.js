@@ -6,13 +6,13 @@ import {connect} from 'react-redux'
 import {push} from 'react-router-redux'
 
 const AppContainer = styled.div `
-  border: red .5px solid;
+  /* border: red .5px solid; */
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-around;
-  background-color: #ebdec2;
+  background-color: black;
   h1{
     font-size: 12vw;
     display: flex;
@@ -25,8 +25,9 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <h1 onClick={() => this.props.push('/')}>Stories of Warcraft</h1>
+        <h1>Stories of Warcraft</h1>
         <UserPage/>
+        <div onClick={() => this.props.push('/')}>Back to Splash page</div>
       </AppContainer>
     )
   }

@@ -5,14 +5,22 @@ import {newUserToDb} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserFormContainer = styled.div `
-border: blue .5px solid;
-margin: 10px;
+/* border: blue .5px solid; */
+margin: 20px;
+border: white 2px solid;
+border-radius: 10px;
+padding: 5px;
 input{
   width: 50%;
   height: 20px;
 }
-button{
-
+.nameQuestion{
+  font-size: 1.5em;
+}
+.nameForm{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
 }`
 class UserForm extends Component {
   state = {
@@ -42,16 +50,16 @@ class UserForm extends Component {
   render() {
     return (
       <UserFormContainer>
-        <h2>
+        <div className="nameQuestion">
           What is your name, Adventurer?
-        </h2>
-        <div>
+        </div>
+        <div className="nameForm">
           <input
             type="text"
             name="name"
             onChange={this.handleChange}
             value={this.state.newUser.name}/>
-          <button onClick={this.handleButtonPress}>Add a user</button>
+          <button onClick={this.handleButtonPress}>Add a Username</button>
         </div>
       </UserFormContainer>
     )

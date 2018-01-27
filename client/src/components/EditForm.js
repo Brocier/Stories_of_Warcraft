@@ -5,7 +5,7 @@ import {editUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const EditUserFormContainer = styled.div `
-  border: purple .5px solid;
+  /* border: purple .5px solid; */
 
   input{
     width: 100%;
