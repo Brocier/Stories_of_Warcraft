@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import UserPage from './UserPage.js'
 import styled from 'styled-components'
-import {BrowserRouter as Router} from 'react-router-dom'
+// import {BrowserRouter as Router} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {push} from 'react-router-redux'
 
 const AppContainer = styled.div `
 border: red .5px solid;
@@ -22,13 +24,11 @@ h1{
 class App extends Component {
   render() {
     return (
-      <Router>
-        <AppContainer>
-          <h1>Stories of Warcraft</h1>
-          <UserPage/>
-        </AppContainer>
-      </Router>
+      <AppContainer>
+        <h1 onClick={() => this.props.push('/reduxIsGreat')}>Stories of Warcraft</h1>
+        <UserPage/>
+      </AppContainer>
     )
   }
 }
-export default App
+export default connect(null, {push})(App)
