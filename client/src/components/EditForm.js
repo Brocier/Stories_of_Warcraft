@@ -6,18 +6,18 @@ import styled from 'styled-components'
 
 const EditUserFormContainer = styled.div `
   /* border: purple .5px solid; */
-  input{
-    width: 100%;
+  /* input{
+    max-width: 27%;
     height: 20px;
     font-family: "Life Craft";
-  }
+  } */
   .editDescriptionRow{
     display: flex;
     padding: 2px;
   }
-  button{
+  /* button{
     width: 131px;
-  }
+  } */
 `
 class EditForm extends Component {
   state = {

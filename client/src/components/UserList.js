@@ -10,7 +10,7 @@ const UserListContainer = styled.div `
   display: flex;
   justify-content: space-between;
   margin: 4px;
-  width: 60vw;
+  width: 70vw;
 .buttons{
   display: flex;
 }
@@ -44,12 +44,16 @@ class UserList extends Component {
           .map((user, i) => {
             return (
               <div className="listholder" key={i}>
-                <a href="/">
-                  {user.name}
-                </a>
-                <div className="description">{user.description}</div>
+                {/* Toggle ternary here */}
+                <div>
+                  <a href="/">{user.name}</a>
+                  <div className="description">{user.description}</div>
+                </div>
+
                 <EditForm user={user}/>
+
                 <div className="buttons">
+                  {/* toggle button for edit turnary here */}
                   <button onClick= {() => this.props.deleteUser(user)}>
                     Delete
                   </button>
