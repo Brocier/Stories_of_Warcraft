@@ -6,7 +6,6 @@ import styled from 'styled-components'
 
 const EditUserFormContainer = styled.div `
   /* border: purple .5px solid; */
-
   input{
     width: 100%;
     height: 20px;
@@ -15,6 +14,9 @@ const EditUserFormContainer = styled.div `
   .editDescriptionRow{
     display: flex;
     padding: 2px;
+  }
+  button{
+    width: 131px;
   }
 `
 class EditForm extends Component {
@@ -47,18 +49,16 @@ class EditForm extends Component {
     return (
       <EditUserFormContainer>
         <div className="editDescriptionRow">
-          <div>
-            <input
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-              value={this.state.userToEdit.name}/>
-            <input
-              type="text"
-              name="description"
-              onChange={this.handleChange}
-              value={this.state.userToEdit.description}/>
-          </div>
+          <input
+            type="text"
+            name="name"
+            onChange={this.handleChange}
+            value={this.state.userToEdit.name}/>
+          <input
+            type="text"
+            name="description"
+            onChange={this.handleChange}
+            value={this.state.userToEdit.description}/>
           <button onClick={this.handleButtonPress}>Edit this</button>
         </div>
       </EditUserFormContainer>

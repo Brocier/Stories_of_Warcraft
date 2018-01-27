@@ -18,7 +18,7 @@ const UserListContainer = styled.div `
       text-decoration: none;
       color: papayawhip;
       border: 3px white solid;
-      padding: 2px;
+      padding: 4px;
       border-radius: 10%;
     }
   }
