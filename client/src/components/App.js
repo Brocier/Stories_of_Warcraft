@@ -7,7 +7,6 @@ import {push} from 'react-router-redux'
 
 const AppContainer = styled.div `
   /* border: red .5px solid; */
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
