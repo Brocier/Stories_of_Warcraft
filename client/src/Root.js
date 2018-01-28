@@ -6,6 +6,7 @@ import createHistory from 'history/createBrowserHistory'
 import configureStore from './configureStore'
 import App from './components/App.js'
 import LandingPage from './components/LandingPage.js'
+import UserCharacterPage from './components/character/UserCharacterPage.js'
 
 const history = createHistory()
 const store = configureStore(history)
@@ -17,6 +18,7 @@ const Root = () => (
       <div>
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/app" component={App}/>
+        <Route exact path="/user/:userid" component={UserCharacterPage}/>
       </div>
     </ConnectedRouter>
   </Provider>

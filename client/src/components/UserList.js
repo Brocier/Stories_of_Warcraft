@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getUsers, editUser, deleteUser} from '../actions/actions.js'
+import {push} from 'react-router-redux'
 import styled from 'styled-components'
+
+import {getUsers, editUser, deleteUser} from '../actions/actions.js'
 import EditForm from './EditForm.js'
 
 const UserListContainer = styled.div `
@@ -14,7 +16,7 @@ const UserListContainer = styled.div `
   width: 40vw;
   padding: 10px;
   }
-  a{
+  .username{
     font-size: 25px;
     text-decoration: none;
     color: #f7b10a;
@@ -49,7 +51,7 @@ class UserList extends Component {
             return (
               <div className="listholder" key={i}>
                 <div className="displayUsers">
-                  <a href="/">{user.name}</a>
+                  <div className="username" onClick={() => this.props.push(`/user/${user._id}`)}>{user.name}</div>
                   <div className="description">{user.description}</div>
                 </div>
                 <div>
@@ -70,4 +72,4 @@ const mapStateToProps = (state) => {
   return {users: state.users}
 }
 
-export default connect(mapStateToProps, {getUsers, editUser, deleteUser})(UserList)
+export default connect(mapStateToProps, {getUsers, editUser, deleteUser, push})(UserList)
