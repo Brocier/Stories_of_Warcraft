@@ -12,7 +12,7 @@ const EditUserFormContainer = styled.div `
   button{
     font-family: "Life Craft";
   }
-`
+  `
 class EditForm extends Component {
   state = {
     userToEdit: {

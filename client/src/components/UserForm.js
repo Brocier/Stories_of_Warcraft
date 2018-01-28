@@ -5,23 +5,23 @@ import {newUserToDb} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const UserFormContainer = styled.div `
-/* border: blue .5px solid; */
-margin: 20px;
-border: white 2px solid;
-border-radius: 10px;
-padding: 5px;
-input{
-  width: 50%;
-  height: 20px;
-}
-.nameQuestion{
-  font-size: 1.5em;
-}
-.nameForm{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 5px;
-}`
+  /* border: blue .5px solid; */
+  margin: 20px;
+  border: white 2px solid;
+  border-radius: 10px;
+  padding: 5px;
+  input{
+    width: 50%;
+    height: 20px;
+  }
+  .nameQuestion{
+    font-size: 1.5em;
+  }
+  .nameForm{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+  }`
 class UserForm extends Component {
   state = {
     newUser: {}

@@ -30,7 +30,7 @@ const UserListContainer = styled.div `
     height:20px;
     border-radius: 10%;
   }
-`
+  `
 class UserList extends Component {
 
   componentWillMount() {
