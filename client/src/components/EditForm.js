@@ -5,19 +5,13 @@ import {editUser} from '../actions/actions.js'
 import styled from 'styled-components'
 
 const EditUserFormContainer = styled.div `
-  /* border: purple .5px solid; */
-  /* input{
-    max-width: 27%;
-    height: 20px;
-    font-family: "Life Craft";
-  } */
+  display: flex;
   .editDescriptionRow{
-    display: flex;
     padding: 2px;
   }
-  /* button{
-    width: 131px;
-  } */
+  button{
+    font-family: "Life Craft";
+  }
 `
 class EditForm extends Component {
   state = {
@@ -49,17 +43,20 @@ class EditForm extends Component {
     return (
       <EditUserFormContainer>
         <div className="editDescriptionRow">
-          <input
-            type="text"
-            name="name"
-            onChange={this.handleChange}
-            value={this.state.userToEdit.name}/>
-          <input
+          <div>
+            <input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={this.state.userToEdit.name}/>
+          </div>
+          <div><input
             type="text"
             name="description"
             onChange={this.handleChange}
             value={this.state.userToEdit.description}/>
-          <button onClick={this.handleButtonPress}>Edit this</button>
+          </div>
+          <button onClick={this.handleButtonPress}>Submit Edit</button>
         </div>
       </EditUserFormContainer>
     )

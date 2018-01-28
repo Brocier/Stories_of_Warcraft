@@ -9,23 +9,27 @@ const UserListContainer = styled.div `
   .listholder{
   display: flex;
   justify-content: space-between;
+  align-content: center;
   margin: 4px;
-  width: 70vw;
-.buttons{
-  display: flex;
-}
-    a{
-      text-decoration: none;
-      color: papayawhip;
-      border: 3px white solid;
-      padding: 4px;
-      border-radius: 10%;
-    }
+  width: 40vw;
+  padding: 10px;
+  }
+  a{
+    font-size: 25px;
+    text-decoration: none;
+    color: #f7b10a;
+    border: 3px white solid;
+    padding: 4px;
+    border-radius: 10%;
+    background-color: rgba(256,0,0,.4);
   }
   .description{
-    padding: 5px;
+    padding: 15px;
   }
-
+  button{
+    height:20px;
+    border-radius: 10%;
+  }
 `
 class UserList extends Component {
 
@@ -44,18 +48,14 @@ class UserList extends Component {
           .map((user, i) => {
             return (
               <div className="listholder" key={i}>
-                {/* Toggle ternary here */}
-                <div>
+                <div className="displayUsers">
                   <a href="/">{user.name}</a>
                   <div className="description">{user.description}</div>
                 </div>
-
-                <EditForm user={user}/>
-
-                <div className="buttons">
-                  {/* toggle button for edit turnary here */}
+                <div>
+                  <EditForm user={user}/>
                   <button onClick= {() => this.props.deleteUser(user)}>
-                    Delete
+                    Delete User
                   </button>
                 </div>
               </div>
