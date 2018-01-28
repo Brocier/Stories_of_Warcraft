@@ -30,13 +30,13 @@ const CharacterSchema = new Schema({
 const UserSchema = new Schema({
   name: {
     type: String,
-    required: false,
+    required: true,
     default: 'Adventurer'
   },
   description: {
     type: String,
     required: false,
-    default: 'Default Description'
+    default: 'A mighty hero from a distant land'
   },
   characters: [CharacterSchema]
 }, {timestamps: {}})
