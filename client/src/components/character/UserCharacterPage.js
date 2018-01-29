@@ -1,10 +1,17 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getUsers} from '../../actions/actions.js'
-// Guess I'll try the mapstatetoprops option first
+import {push} from 'react-router-redux'
 import styled from 'styled-components'
+
 const UserCharacterPageContainer = styled.div `
-  border: red solid 1px;
+font-size: 36px;
+display: flex;
+flex-direction: column;
+align-items: center;
+.border{
+  border: .5px white dotted;
+}
   `
 class UserCharacterPage extends Component {
   componentWillMount() {
@@ -23,7 +30,8 @@ class UserCharacterPage extends Component {
             .map((user, i) => {
               if (user._id === userId) {
                 return (
-                  <div key={i}>
+                  <div className="border" key={i}>
+                    <div>User:</div>
                     <div>{user.name}</div>
                     <div>{user.description}</div>
                     <div>
@@ -31,9 +39,9 @@ class UserCharacterPage extends Component {
                         .characters
                         .map((character, i) => {
                           return (
-                            <div>
+                            <div className="border" key={i}>
                               <div>
-                                Character
+                                Character:
                               </div>
                               <div>
                                 {character.name}
@@ -46,8 +54,8 @@ class UserCharacterPage extends Component {
                                   .quests
                                   .map((quest, i) => {
                                     return (
-                                      <div>
-                                        Quest
+                                      <div className="border" key={i}>
+                                        Quest:
                                         <div>
                                           {quest.name}
                                         </div>
@@ -67,6 +75,7 @@ class UserCharacterPage extends Component {
               }
             })}
         </div>
+        <div onClick={() => this.props.push('/app')} className="border">Back to Users List</div>
       </UserCharacterPageContainer>
     )
   }
@@ -74,4 +83,4 @@ class UserCharacterPage extends Component {
 const mapStateToProps = (state) => {
   return {users: state.users}
 }
-export default connect(mapStateToProps, {getUsers})(UserCharacterPage)
+export default connect(mapStateToProps, {getUsers, push})(UserCharacterPage)
