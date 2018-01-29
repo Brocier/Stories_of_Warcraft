@@ -27,6 +27,7 @@ class UserCharacterPage extends Component {
           {this
             .props
             .users
+          // eslint-disable-next-line
             .map((user, i) => {
               if (user._id === userId) {
                 return (
