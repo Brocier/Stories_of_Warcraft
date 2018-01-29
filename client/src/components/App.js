@@ -19,6 +19,10 @@ const AppContainer = styled.div `
     font-weight: 100;
     margin: 0;
   }
+  .footer{
+    display: flex;
+    justify-content: space-between;
+  }
   `
 class App extends Component {
   render() {
@@ -26,7 +30,10 @@ class App extends Component {
       <AppContainer>
         <h1>Stories of Warcraft</h1>
         <UserPage/>
-        <div onClick={() => this.props.push('/')}>Back to Splash page</div>
+        <div className="footer">
+          <div onClick={() => this.props.push('/')}>Back to Splash page</div>
+          <div onClick={() => this.props.push('/quest')}>Quest Page Mock-up</div>
+        </div>
       </AppContainer>
     )
   }

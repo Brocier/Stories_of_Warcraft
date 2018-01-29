@@ -7,6 +7,7 @@ import configureStore from './configureStore'
 import App from './components/App.js'
 import LandingPage from './components/LandingPage.js'
 import UserCharacterPage from './components/character/UserCharacterPage.js'
+import QuestPage from './components/QuestPage'
 
 const history = createHistory()
 const store = configureStore(history)
@@ -19,6 +20,7 @@ const Root = () => (
         <Route exact path="/" component={LandingPage}/>
         <Route exact path="/app" component={App}/>
         <Route exact path="/user/:userid" component={UserCharacterPage}/>
+        <Route exact path="/quest" component={QuestPage}/>
       </div>
     </ConnectedRouter>
   </Provider>
