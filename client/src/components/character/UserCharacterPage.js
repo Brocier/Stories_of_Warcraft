@@ -81,7 +81,7 @@ class UserCharacterPage extends Component {
     )
   }
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   return {users: state.users}
 }
 export default connect(mapStateToProps, {getUsers, push})(UserCharacterPage)
